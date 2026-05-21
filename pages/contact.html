@@ -146,7 +146,8 @@ h2 {
     }
 }
 .frm{
-    width: 450px;
+    max-width: 450px;
+    width: 90%;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px white,
@@ -161,6 +162,34 @@ h2 {
         0 0 20px rgb(133, 9, 56),
         0 0 30px rgb(194, 2, 194);
         font-weight: 500;
+}
+@media (min-width: 480px) and (max-width: 992px){
+    h1 {
+        font-size: 28px; /* Scales header down so it fits smoothly on mobile */
+    }
+    h2 {
+        font-size: 24px;
+    }
+    #short {
+        font-size: 14px; /* Shrinks description subtitle text */
+    }
+    
+    /* Footer Scaling to cleanly manage 4 columns side-by-side */
+    #awe h4 {
+        font-size: 16px !important;
+    }
+    #awe p, 
+    #awe ul, 
+    #awe li, 
+    #awe a {
+        font-size: 13px !important;
+        word-break: break-word; /* Prevents long email links or addresses from pushing out layout boxes */
+    }
+    
+    /* Shrinks form labels/inputs slightly on tight device resolutions */
+    .form-label, .form-control, .btn {
+        font-size: 14px;
+    }
 }
 
 </style>
@@ -210,19 +239,19 @@ h2 {
             <textarea class="form-control" id="message" rows="3" placeholder="Enter your message" required></textarea>
             <div class="invalid-feedback">Please enter your message.</div>
         </div>
-        <button type="submit" class="btn btn-outline-custom btn-lg ms-5">Send Message</button>
-        <button type="reset" class="btn btn-lg btn-dark mx-5">Clear</button>
+        <button type="submit" class="btn btn-outline-custom ms-5">Send Message</button>
+        <button type="reset" class="btn btn-dark mx-5">Clear</button>
     </form>
     </div>
     <div class="container border border-secondary mb-5"></div>
     <div class="container">
         <footer id="awe">
             <div class="row mt-3">
-                <div class="col-md-3">
+                <div class="col-3">
                     <h4>Victory Laptops</h4>
                     <p>3rd floor, High Street Mall,<br> Near Suzuki Showroom,<br>Road No 25, Wagle Estate<br>Thane-west</p>
                 </div>
-                <div class="col-md-3">
+                <div class="col-3">
                     <h4>Quick Links</h4>
                     <ul class="list-unstyled">
                         <li><a href="#" class="text-decoration-none text-warning">FAQ</a></li>
@@ -231,12 +260,12 @@ h2 {
                         <li><a href="#" class="text-decoration-none text-warning">Privacy Policy</a></li>
                     </ul>
                 </div>
-                <div class="col-md-3">
+                <div class="col-3">
                     <h4>Contact Us</h4>
                     <p><i class="bi bi-telephone-fill"></i> +91 12345 67890</p>
                     <p><i class="bi bi-envelope-fill"></i> victory352@gmail.com</p>
                 </div>
-                <div class="col-md-3">
+                <div class="col-3">
                     <h4>Follow Us</h4>
                     <ul class="list-unstyled">
                         <li><a href="#" class="fa-brands fa-facebook text-decoration-none mb-3 bg-light"></a> Victory_Laptops</li>
